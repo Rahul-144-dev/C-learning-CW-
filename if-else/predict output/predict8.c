@@ -7,6 +7,6 @@ int main()
     if (i == j)
         printf("eqal");
     else
-        printf("!=");
+        printf("not equal");
     return 0;
 }
