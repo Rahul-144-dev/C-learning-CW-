@@ -6,12 +6,9 @@ int main()
 	scanf("%d", &n);
 	for (int i = 1; i <= n; i++)
 	{
-		for (int j = 1; j <= x; j++)
+		for (int j = 1; j <= x; j += 2)
 		{
-			if (j % 2 != 0)
-			{
-				printf("%d ", j);
-			}
+			printf("%d ", j);
 		}
 		printf("\n");
 		x += 2;

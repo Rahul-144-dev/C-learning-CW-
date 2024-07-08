@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 int main()
 {
     int l, b;
@@ -11,7 +10,7 @@ int main()
     {
         for (int i = 1; i <= b; i++)
         {
-            printf("*");
+            printf("*  ");
         }
         printf("\n");
     }
