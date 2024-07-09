@@ -1,19 +1,21 @@
 #include <stdio.h>
 int main()
 {
-    int num;//num=4
+    int num;
     printf("enter number : ");
     scanf("%d", &num);
     for (int i = 1; i <= num; i++)
     {
-        int a = 1;
-        for (int j = 1; j <= num; j++)
+        int x, y = 1;
+        for (int j = 1; j <= num - i; j++)
         {
-            int x = a + 96;
-            char ch = (char)x;
-            printf("%c  ", ch);
+            printf("  ");
+        }
+        for (int k = 1; k <= 2 * i - 1; k++)
+        {
+            x = y + 64;
             printf("%c ", x);
-            a++;
+            y++;
         }
         printf("\n");
     }
