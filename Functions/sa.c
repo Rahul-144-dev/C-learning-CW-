@@ -8,7 +8,11 @@ int main()
     scanf("%d", &a);
     printf("enter number : ");
     scanf("%d", &b);
-    int facto = sum(a, b);
-    printf("%d", facto);
+    printf("%d\n", sum(a, b));
+    printf("%d\n", sub(a, b));
+    printf("%d\n", mul(a, b));
+    printf("%d\n", div(a, b));
+    printf("%d\n", fact(a));
+    printf("%d\n", ncr(a, b));
     return 0;
 }
