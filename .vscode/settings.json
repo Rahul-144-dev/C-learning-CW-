@@ -1,2 +1,4 @@
 {
+    "editor.smoothScrolling": true,
+    "C_Cpp.errorSquiggles": "enabled"
 }
