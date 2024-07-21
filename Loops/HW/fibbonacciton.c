@@ -18,10 +18,10 @@ int main()
         }
         else
         {
-        sum = a + b;
-        a = b;
-        b = sum;
-        printf("the %dth fibbonacci number is %d\n", i, sum);
+            sum = a + b;
+            a = b;
+            b = sum;
+            printf("the %dth fibbonacci number is %d\n", i, sum);
         }
     }
     return 0;

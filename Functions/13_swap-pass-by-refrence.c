@@ -19,5 +19,4 @@ void swap(int *x, int *y) /// function defination
     int temp = *x;
     *x = *y;
     *y = temp;
-    return;
 }
