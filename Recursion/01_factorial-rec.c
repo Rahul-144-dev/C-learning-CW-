@@ -7,17 +7,16 @@ int main()
     int n;
     printf("enter number : ");
     scanf("%d", &n);
-    // int f = 3;
-    // printf("%d", f);
-    factorial(n);
+    int fac = factorial(n);
+    printf("%d", fac);
     return 0;
 }
 int factorial(int n)
 {
-    if (n == 1)
-        return 1;
-    printf("%d\n", factorial);
     return n * factorial(n - 1);
+    // if (n == 1)
+    //     return 1;
+    // printf("%d\n", factorial);
 }
 // int fact(int n)
 // {
