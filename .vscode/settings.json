@@ -11,7 +11,7 @@
     ".vscode": true
   },
   "explorerExclude.backup": {},
-  "editor.fontSize": 15,
+  "editor.fontSize": 18,
   "files.associations": {
     "math.h": "c"
   }
