@@ -6,8 +6,8 @@ int main()
     int x, count = 0;
     printf("enter number : ");
     scanf("%d", &x);
-    int arr[7] = {1, 2, 3, 4, 5, 6, 4};
-    for (int i = 0; i <= 6; i++)
+    int arr[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    for (int i = 0; i <= 20; i++)
     {
         if (arr[i] > x)
             count++;

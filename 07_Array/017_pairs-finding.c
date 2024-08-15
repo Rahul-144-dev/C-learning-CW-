@@ -3,22 +3,30 @@
 #include <math.h>
 int main()
 {
-    int x;
-    printf("enter number : ");
-    scanf("%d", &x);
-    int arr[8] = {1, 2, 3, 4, 5, 6, 7, 8};
-    int pair = 0;
-    for (int i = 0; i <= 7; i++)
-    {
-        for (int j = i + 1; j <= 7; j++)
-        {
-            if (arr[i] + arr[j] == x)
-            {
-                pair++;
-                printf("pair of (%d,%d)\n",arr[i],arr[j]);
-            }
-        }
-    }
-    printf("pair : %d", pair);
-    return 0;
+	int x, n;
+	printf("enter number : ");
+	scanf("%d", &x);
+	printf("enter arr number : ");
+	scanf("%d", &n);
+	int arr[n];
+	for (int i = 0; i < n; i++)
+	{
+		printf("enter arr[%d] : ",i);
+		scanf("%d", &arr[i]);
+	}
+	// int arr[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+	int pair = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[i] + arr[j] == x)
+			{
+				pair++;
+				printf("pair of (%d,%d)\n", arr[i], arr[j]);
+			}
+		}
+	}
+	printf("pair : %d", pair);
+	return 0;
 }
