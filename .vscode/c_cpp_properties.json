@@ -3,16 +3,18 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/MinGW/include",
+                "C:/llvm-mingw/include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:/llvm-mingw/bin/clang++.exe",
+            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
             "cStandard": "c11",
-            "intelliSenseMode": "clang-x64",
+            "intelliSenseMode": "windows-gcc-x64",
             "cppStandard": "c++11"
         }
     ],
