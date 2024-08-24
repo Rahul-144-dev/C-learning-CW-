@@ -17,7 +17,6 @@ int main(void)
 void palin(int arr[], int n)
 {
   int count = 0;
-
   for (int i = 0, j = n - 1; i < j; i++, j--)
   {
     if (arr[i] == arr[j])
