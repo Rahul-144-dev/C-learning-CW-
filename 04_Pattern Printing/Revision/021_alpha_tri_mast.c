@@ -6,9 +6,15 @@ int main()
   scanf("%d", &n);
   for (int i = 1; i <= n; i++)
   {
+    int x = 65;
     for (int j = 1; j <= n - i; j++)
     {
-      printf("%d ", j);
+      printf("  ");
+    }
+    for (int k = 1; k <= i; k++)
+    {
+      printf("%c ", x);
+      x++;
     }
     printf("\n");
   }
