@@ -1,21 +1,22 @@
 #include <stdio.h>
-void main()
+int main()
 {
   int n;
-  printf("enter a number : ");
+  printf("enter number : ");
   scanf("%d", &n);
-  int nst = 1;
   for (int i = 1; i <= n; i++)
   {
+    int a = 65;
     for (int j = 1; j <= n - i; j++)
     {
       printf("- ");
     }
-    for (int k = 1; k <= nst; k++)
+    for (int k = 1; k <= 2 * i - 1; k++)
     {
-      printf("* ");
+      printf("%c ", a);
+      a++;
     }
-    nst = nst + 2;
     printf("\n");
   }
+  return 0;
 }

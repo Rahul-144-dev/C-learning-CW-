@@ -1,21 +1,24 @@
 #include <stdio.h>
-void main()
+int main()
 {
   int n;
-  printf("enter a number : ");
+  printf("enter number : ");
   scanf("%d", &n);
   int nst = 1;
+  int nsp = n;
   for (int i = 1; i <= n; i++)
   {
-    for (int j = 1; j <= n - i; j++)
+    for (int j = 1; j <= nsp; j++)
     {
-      printf("- ");
+      printf("  ");
     }
     for (int k = 1; k <= nst; k++)
     {
-      printf("* ");
+      printf("%d ", k);
     }
     nst = nst + 2;
+    nsp = nsp - 1;
     printf("\n");
   }
+  return 0;
 }
