@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <myfunc.h>
 int main()
 {
   int n;
@@ -15,7 +16,7 @@ int main()
       int b = j;
       if (j > n)
         b = 2 * n - j;
-      min = (a < b) ? a : b; // minimum of 2 numbers
+      min = min_2(a, b); // minimum of 2 numbers
       printf("%d ", n + 1 - min);
     }
     printf("\n");
