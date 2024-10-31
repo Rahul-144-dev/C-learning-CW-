@@ -1,19 +1,20 @@
 #include <stdio.h>
-void dec_inc(int n);
+void sum(int n, int s);
 int main()
 {
   int n;
   printf("enter number : ");
   scanf("%d", &n);
-  dec_inc(n);
+  sum(n, 0);
   return 0;
 }
-void dec_inc(int n)
+void sum(int n, int s)
 {
   if (n == 0)
+  {
+    printf("%d\n", s);
     return;
-  printf("%d\n", n);
-  dec_inc(n - 1);
-  printf("%d\n", n);
+  }
+  sum(n - 1, s + n);
   return;
 }
