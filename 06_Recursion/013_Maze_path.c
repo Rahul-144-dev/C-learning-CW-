@@ -1,10 +1,16 @@
 #include <stdio.h>
+/*
+cr = current row
+cc = current column
+er = end row
+ec = end column
+*/
 int maze(int cr, int cc, int er, int ec)
 {
   int right_ways = 0;
   int down_ways = 0;
   if (cr == er && cc == ec)
-  { // position last row & column
+  { // if we are in the last row & column
     return 1;
   }
   if (cr == er)
@@ -16,11 +22,10 @@ int maze(int cr, int cc, int er, int ec)
     down_ways += maze(cr + 1, cc, er, ec);
   }
   if (cr < er && cc < ec)
-  {
+  { // both ways call
     right_ways += maze(cr, cc + 1, er, ec);
     down_ways += maze(cr + 1, cc, er, ec);
   }
-
   int total_ways = right_ways + down_ways;
 }
 int main()
