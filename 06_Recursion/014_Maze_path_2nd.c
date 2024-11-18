@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <myfunc.h>
 int maze2(int cr, int cc);
 int maze(int cr, int cc);
 int main()
@@ -15,9 +16,9 @@ int main()
 int maze(int cr, int cc)
 {
   if (cr == 1 && cc == 1)
-    return 1; // pos = we are at the end
+    return 1; // pos = we are at the end point
   int right_ways = 0, down_ways = 0;
-  if (cr > 1) // pos=
+  if (cr > 1) // pos =
     down_ways = maze(cr - 1, cc);
   if (cc > 1) //
     right_ways = maze(cr, cc - 1);

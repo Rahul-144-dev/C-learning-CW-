@@ -16,5 +16,6 @@
     "math.h": "c",
     "stdio.h": "c",
     "myfunc.h": "c"
-  }
+  },
+  "workbench.colorTheme": "Nox Noctis (amoled)"
 }
