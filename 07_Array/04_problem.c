@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main()
 {
-  int arr[5] = {1, 2, 3, 1, 3};
-  for (int i = 0; i < 5; i++)
+  int arr[50];
+  for (int i = 0; i < 50; i++)
   {
-    printf("%p\n", &arr[i]);
+    printf("%d\n", arr[i]);
   }
   return 0;
 }
