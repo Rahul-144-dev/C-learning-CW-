@@ -1,10 +1,19 @@
 #include <stdio.h>
-void print_array(int arr[row][col]);
-void input_array(int arr[row][col]);
-void input(int array[row][col]);
-void print_size(int (*arr)[row][col]);
-// Global Variable
 int row, col;
+// void input_array(int arr[row][col]);
+void input_rc(int *row, int *col);
+void input_2d(int array[row][col]);
+void print_array(int arr[row][col]);
+// void print_size(int (*arr)[row][col]);
+// Global Variable
+void main()
+{
+  input_rc(&row, &col);
+  int arr[row][col];
+  input_2d(arr);
+  print_array(arr);
+  return;
+}
 void input_rc(int *row, int *col)
 {
   printf("Enter Row : ");
@@ -12,35 +21,14 @@ void input_rc(int *row, int *col)
   printf("Enter Col : ");
   scanf("%d", col);
 }
-void main()
-{
-  // int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-  // print_size(&arr);
-  // input_array(arr);
-  int arr[row][col];
-  input_rc(&row, &col);
-  input(arr);
-  print_array(arr);
-  return;
-}
-void print_array(int arr[row][col])
-{
-  puts("the elements of the array");
-  for (int i = 0; i < row; i++)
-  {
-    for (int j = 0; j < col; j++)
-    {
-      printf("%d ", arr[i][j]);
-    }
-    puts("");
-  }
-}
-void input(int array[row][col])
+void input_2d(int array[row][col])
 {
   for (int i = 0; i < row; i++)
   {
+    printf("R%d : ", i + 1);
     for (int j = 0; j < col; j++)
     {
+      printf("C%d : ", j + 1);
       scanf("%d", &array[i][j]);
     }
   }
@@ -55,6 +43,18 @@ void input_array(int arr[row][col])
       printf("arr[%d][%d] = ", i, j);
       scanf("%d", &arr[i][j]);
     }
+  }
+}
+void print_array(int arr[row][col])
+{
+  puts("the elements of the array");
+  for (int i = 0; i < row; i++)
+  {
+    for (int j = 0; j < col; j++)
+    {
+      printf("%d ", arr[i][j]);
+    }
+    puts("");
   }
 }
 void print_size(int (*arr)[row][col])

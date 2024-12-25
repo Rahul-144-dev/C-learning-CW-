@@ -1,36 +1,45 @@
 #include <stdio.h>
-int add(int a, int b);
-int subtract(int a, int b);
-int mul(int a, int b);
-int div(int a, int b);
+// Function prototypes
+void print_array(int arr[][100], int row, int col);
+void input_array(int arr[][100], int row, int col);
+void input_rc(int *row, int *col);
 
-void main()
+int main()
 {
-  int (*funcArr[])(int, int) = {add, subtract, mul, div};
-  int result = funcArr[0](5, 3); // Calls add(5, 3)
-  printf("%d", result);
+  int row, col;
+  input_rc(&row, &col);       // Get the number of rows and columns
+  int arr[row][col];          // Declare the array with the specified size
+  input_array(arr, row, col); // Input the array elements
+  print_array(arr, row, col); // Print the array elements
+  return 0;
 }
-int add(int a, int b)
+void input_rc(int *row, int *col)
 {
-  return a + b;
+  printf("Enter Row: ");
+  scanf("%d", row);
+  printf("Enter Col: ");
+  scanf("%d", col);
 }
-int subtract(int a, int b)
+void input_array(int arr[][100], int row, int col)
 {
-  return a - b;
-}
-int mul(int a, int b)
-{
-  return a * b;
-}
-int div(int a, int b)
-{
-  if (b != 0)
+  printf("Enter the elements of the array:\n");
+  for (int i = 0; i < row; i++)
   {
-    return a / b;
+    for (int j = 0; j < col; j++)
+    {
+      scanf("%d", &arr[i][j]);
+    }
   }
-  else
+}
+void print_array(int arr[][100], int row, int col)
+{
+  puts("The elements of the array:");
+  for (int i = 0; i < row; i++)
   {
-    printf("Error: Division by zero\n");
-    return 0; // Return 0 or handle the error as needed
+    for (int j = 0; j < col; j++)
+    {
+      printf("%d ", arr[i][j]);
+    }
+    printf("\n");
   }
 }
