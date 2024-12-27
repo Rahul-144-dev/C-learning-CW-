@@ -9,7 +9,7 @@ int main()
   /*
     1 0 1 1
     0 1 0 1
-    1 0 0 1
+    1 1 1 1
   */
   int max_count = 0;
   int max_idx = 0;
