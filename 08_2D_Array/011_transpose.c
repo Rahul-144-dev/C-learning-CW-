@@ -12,6 +12,7 @@ int main()
   int brr[3][2];
   transpose(arr, brr);
   prt(brr, 3, 2);
+
   return 0;
 }
 void transpose(int arr[r][c], int brr[c][r])
