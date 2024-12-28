@@ -1,43 +1,53 @@
 #include <stdio.h>
-// Global Variable
-int r;
-int c;
-void get_dimensions(int arr[][3], int *r, int *c);
-void prt(int arr[r][c], int r, int c);
-void transpose(int arr[r][c], int brr[c][r]);
+void prt_arr(int arr[][3], int r, int c);
+void prt_brr(int arr[][2], int r, int c);
+void transpose(int arr[][3], int r, int c, int brr[][2]);
+/* Main Function */
 int main()
 {
   int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};
-  get_dimensions(arr, &r, &c);
+  int r = sizeof(arr) / sizeof(arr[0]);
+  int c = sizeof(arr[0]) / sizeof(arr[0][0]);
   int brr[3][2];
-  transpose(arr, brr);
-  prt(brr, 3, 2);
-
+  prt_arr(arr, r, c);
+  transpose(arr, r, c, brr);
+  prt_brr(brr, c, r);
   return 0;
 }
-void transpose(int arr[r][c], int brr[c][r])
+/* Matrix Transpose Function */
+/* int arr[][3] = array[no need][size to get dimention] */
+void transpose(int arr[][3], int r, int c, int brr[][2])
 {
-  for (int i = 0; i < r; i++)
+  for (int i = 0; i < c; i++) // c=3
   {
-    for (int j = 0; j < c; j++)
+    for (int j = 0; j < r; j++) // r=2
     {
-      brr[j][i] = arr[i][j];
+      brr[i][j] = arr[j][i];
     }
   }
 }
-void prt(int arr[][2], int r, int c)
+/* Print Matrix Function */
+void prt_arr(int arr[][3], int r, int c)
 {
-  for (int i = 0; i < r; i++)
+  printf("The Real Matrix\n");
+  for (int i = 0; i < r; i++) // r=2
   {
-    for (int j = 0; j < c; j++)
+    for (int j = 0; j < c; j++) // c=3
     {
-      printf("%d ", arr[j][i]);
+      printf("%d ", arr[i][j]);
     }
     printf("\n");
   }
 }
-void get_dimensions(int arr[][3], int *r, int *c)
+void prt_brr(int brr[][2], int r, int c)
 {
-  *r = sizeof(arr) / sizeof(arr[0]);
-  *c = sizeof(arr[0]) / sizeof(arr[0][0]);
+  printf("The Transpose Matrix\n");
+  for (int i = 0; i < r; i++)
+  {
+    for (int j = 0; j < c; j++)
+    {
+      printf("%d ", brr[i][j]);
+    }
+    printf("\n");
+  }
 }
