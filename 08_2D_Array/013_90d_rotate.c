@@ -12,7 +12,9 @@ int main()
   int arr[r][c];
   array_initialize(arr);
   print_array(arr);
+  // Step 1 : Transpose
   transpose(arr);
+  // Step 2 : Reverse the rows of the 2d Array
   reverse_array_row(arr);
   puts("");
   print_array(arr);
