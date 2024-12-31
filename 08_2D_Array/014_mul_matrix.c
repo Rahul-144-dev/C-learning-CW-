@@ -12,7 +12,7 @@ int main()
     get_dimension(&m, &n, &p, &q); // Prompt the user to enter dimensions
     if (n != p)
     {
-      printf("The matrices cannot be multiplied....Please Re-enter the dimensions again....\n");
+      printf("The matrices cannot be multiplied....\nPlease Re-enter the dimensions again....\n");
     }
   } while (n != p); // Repeat the loop if the number of columns in the first matrix is not equal to the number of rows in the second matrix
   // Rest of the code...
@@ -30,9 +30,10 @@ void matrix_multiply(int arr[m][n], int brr[p][q], int res[m][q])
   {
     for (int j = 0; j < q; j++)
     {
-      // i row of a[][] & j column of b[][]
-      // (a[i][0],a[i][1],a[i][2]......) * (b[0][j],b[1][j],b[2][j],)
-      // b[0][j],
+      /*
+          i row of a[r][] , j column of b[][c]
+          (a[i][0],a[i][1],a[i][2]......) * (b[0][j],b[1][j],b[2][j],)
+      */
       res[i][j] = 0;
       for (int k = 0; k < p; k++)
       {

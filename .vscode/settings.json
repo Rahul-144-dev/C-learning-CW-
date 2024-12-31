@@ -17,5 +17,5 @@
     "stdio.h": "c",
     "myfunc.h": "c"
   },
-  "workbench.colorTheme": "Dark Chai"
+  "workbench.colorTheme": "Monokai"
 }
