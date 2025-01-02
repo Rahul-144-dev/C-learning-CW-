@@ -16,6 +16,21 @@ int main()
   // print_array(arr);
   return 0;
 }
+void reverse_odd_row(int arr[r][c])
+{
+  for (int i = 0; i < r; i++)
+  {
+    for (int j = 0, k = c - 1; j <= k; j++, k--)
+    {
+      if (i % 2 != 0)
+      {
+        int temp = arr[i][j];
+        arr[i][j] = arr[i][k];
+        arr[i][k] = temp;
+      }
+    }
+  }
+}
 void reverse_odd_row_direct_print(int arr[r][c])
 {
   puts("array print");
@@ -36,21 +51,6 @@ void reverse_odd_row_direct_print(int arr[r][c])
       }
     }
     puts("");
-  }
-}
-void reverse_odd_row(int arr[r][c])
-{
-  for (int i = 0; i < r; i++)
-  {
-    for (int j = 0, k = c - 1; j <= k; j++, k--)
-    {
-      if (i % 2 != 0)
-      {
-        int temp = arr[i][j];
-        arr[i][j] = arr[i][k];
-        arr[i][k] = temp;
-      }
-    }
   }
 }
 void print_array(int arr[r][c])

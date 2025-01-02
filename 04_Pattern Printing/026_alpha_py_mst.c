@@ -4,7 +4,8 @@ int main()
   int n;
   printf("enter number : ");
   scanf("%d", &n);
-  for (int i = 1; i <= n; i++)
+  int count = 0;
+  for (int i = 1; i <= n; i++, count++)
   {
     for (int j = 1; j <= n - i; j++) // spaces print
     {
@@ -22,5 +23,6 @@ int main()
     }
     printf("\n");
   }
+  printf("%d ", count);
   return 0;
 }
