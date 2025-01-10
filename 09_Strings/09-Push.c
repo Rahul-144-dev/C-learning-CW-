@@ -8,7 +8,7 @@ int main()
   {
     str[i + 1] = str[i];
   }
-  // str[2] = 'k';
+  str[2] = 'k';
   printf("%s", str);
   return 0;
 }
