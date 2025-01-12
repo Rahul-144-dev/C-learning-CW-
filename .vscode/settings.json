@@ -15,7 +15,9 @@
   "files.associations": {
     "math.h": "c",
     "stdio.h": "c",
-    "myfunc.h": "c"
+    "myfunc.h": "c",
+    "string.h": "c",
+    "typeinfo": "c"
   },
   "workbench.colorTheme": "Nox Noctis (amoled)",
   "background.windowBackgrounds": [

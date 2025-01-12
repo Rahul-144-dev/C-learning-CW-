@@ -3,7 +3,7 @@
 /* Main Function */
 int main()
 {
-  struct book
+  struct Book
   {
     char name[50];
     int pages;
