@@ -17,9 +17,19 @@ typedef union pokemon
 /* Main Function */
 int main()
 {
-  pokemon pikachu;{
-    
+  pokemon pikachu;
+  {
+    pikachu.hp = 60;
+    pikachu.attack = 70;
+    pikachu.speed = 100;
+    pikachu.tier = 'A';
+    strcpy(pikachu.name, "Pikachu");
   }
+  printf("hp : %d\n", pikachu.hp);
+  printf("attack : %d\n", pikachu.attack);
+  printf("speed : %d\n", pikachu.speed);
+  printf("tier : %c\n", pikachu.tier);
+  printf("name : %s\n", pikachu.name);
   return 0;
 }
 /* Function Definition */
